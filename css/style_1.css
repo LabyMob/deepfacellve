@@ -1,0 +1,484 @@
+/**
+ * Theme Name: Blocksy Child
+ * Description: Blocksy Child theme
+ * Author: Creative Themes
+ * Template: blocksy
+ * Text Domain: blocksy
+ */
+
+
+
+
+
+/********************************/
+/* Core Customizations          */
+/********************************/
+
+/*Remove underline from all links*/
+.entry-content a:not([class*=button]), .widget a {
+	text-decoration: unset;
+}
+
+/*inner container content max width*/
+.entry-content [class*="_inner-container"]>*:not(.alignfull) {
+	width:unset !important;
+}
+
+/*Style inputs*/
+/* select, select option, textarea, input[type='url'], input[type='tel'], input[type='text'], input[type='time'], input[type='date'], input[type='datetime'], input[type='email'], input[type='number'], input[type='search'], input[type='password'], .ct-widget select, fieldset .wc-stripe-elements-field {
+		background-color: #121212 !important;
+} */
+select, select option, textarea, input[type='url'], input[type='tel'], input[type='text'], input[type='time'], input[type='date'], input[type='datetime'], input[type='email'], input[type='number'], input[type='search'], input[type='password'], .ct-widget select, fieldset .wc-stripe-elements-field {
+		color: unset !important;
+}
+
+/* Break words in tables */
+ table, table.break-all-words {
+	word-wrap: break-word;
+	word-break: break-all;
+ }
+
+/*****************************************/
+/* Page/Content Specific Customizations  */
+/*****************************************/
+
+/* Remove margin from wiki #workspace List Element */
+/*
+.page-id-1738 #workspace .wp-block-columns {
+	margin-bottom: unset !important;
+}
+*/
+
+/* Guide Page: Add margin-bottom to '>' list items */
+.page-id-2857 ul.is-style-arrow li {
+	margin-bottom: 1.2em;
+}
+/* Guide Page: Add color to first line of required list items*/
+.page-id-2857 ul.dfl-list-required li::first-line {
+	color: #00eeba; /*green*/
+}
+
+/********************************/
+/* Custom Classes               */
+/********************************/
+
+/* Add Column Borders class */
+.has-border {
+    border-width: 3px;
+	border-radius: 3px;
+    border-style: solid;
+    border-color: #00c2ff;
+    padding: 35px;
+}
+
+
+
+#menu-item-704.menu-item-border {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #00c2ff;
+}
+
+.sticky-top {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+/* Hide reCaptcha badge */
+.grecaptcha-badge { visibility: hidden; }
+
+/************************************/
+/* Filter Everything Customizations */
+/************************************/
+
+/* span.wpc-icon-line-1:after, span.wpc-icon-line-2:after, span.wpc-icon-line-3:after {
+	display: none !important;
+}
+
+a.wpc-open-close-filters-button.wpc-opened {
+	content: 'Filter This';
+}
+
+.wpc-custom-selected-terms, .wpc-filter-chips-list, .wpc-chip-content, .widget-area .widget .wpc-filter-chips-list a, .wpc-filter-chips-list a, body .wpc-filter-chips-list li.wpc-filter-chip a {
+	color: var(--heading-color, var(--heading-2-color, var(--headings-color)));
+} */
+
+/*****************************/
+/* BBPress Customizations    */
+/*****************************/
+
+/* Display <code> in forum */
+#bbpress-forums div.bbp-reply-content code {
+    background-color: #121212;
+    border-radius: 5px;
+    border: 1px solid #f2f5f7;
+	margin-top: 0.25rem;
+    color: #f2f5f7;
+}
+
+/* Menu Avatar */
+a.ct-menu-link .avatar {
+	border-radius: 50%;
+	margin-left: 0.5em;
+}
+
+/* Freshness Avatar */
+#bbpress-forums p.bbp-topic-meta img.avatar {
+	border: unset;
+	border-radius: 17px;
+	border-width: 2px;
+    border-style: solid;
+    border-color: #e1e8ed;
+}
+
+/* Started By Avatar */
+#bbpress-forums p.bbp-topic-meta img.avatar-14 {
+	border-width: 0px;
+    border-style: none;
+	border-radius: 7px;
+}
+
+/* Autho box avatar */
+#bbpress-forums div.bbp-reply-author img.avatar {
+	border: unset;
+	border-radius: 42px;
+	border-width: 2px;
+    border-style: solid;
+    border-color: #e1e8ed;
+}
+
+#bbpress-forums div.bbp-reply-author img.avatar {
+    clear: left;
+    display: block;
+}
+
+/*****************************/
+/* BuddyPress Customizations */
+/*****************************/
+
+/*BP Lists*/
+.activity-list.bp-list, .activity-list.bp-list .activity-item, .activity-list .activity-item .activity-content .activity-inner {
+	background-color:unset;
+}
+
+/*** BP Form Inputs ***/
+/*Fix Inputs and displays*/
+#buddypress input[type=text], #buddypress input[type=email], #buddypress input[type=password], #buddypress select, .buddypress-wrap .standard-form textarea, 
+.activity-update-form #whats-new-textarea textarea, .buddypress-wrap .bp-tables-user tbody tr, .buddypress-wrap .bp-tables-user tbody tr.alt, .buddypress-wrap .bp-tables-user tbody tr td, .buddypress-wrap .bp-tables-user tbody tr.alt td, .activity-list .activity-item .activity-meta.action {
+	background-color: unset;
+	color:unset;
+}
+#buddypress input[type=text]:focus, #buddypress input[type=email]:focus, #buddypress input[type=password]:focus,
+.activity-update-form #whats-new-textarea textarea:focus, .buddypress-wrap .standard-form textarea:focus {
+	background-color: unset;
+	color: unset;
+}
+
+#buddypress select option {
+	background-color:black;
+	color:white;
+}
+
+#buddypress .standard-form p.description {
+	background-color: unset;
+}
+
+/*.buddypress-wrap .standard-form .submit*/
+
+/*Submit Button*/
+ input[type=submit], #buddypress .standard-form input[type=submit], .buddypress .buddypress-wrap button, .buddypress .buddypress-wrap input[type=button] {
+	padding: 7px !important;
+	color: #00c2ff;
+	background-color: #121212;
+	border: 2px solid;
+	border-color: #00c2ff;
+	margin: 0px 0px 0px 0px;
+}
+/*Submit Button Hover*/
+input[type=submit]:hover,  #buddypress .standard-form input[type=submit]:hover, .buddypress .buddypress-wrap button:hover, .buddypress .buddypress-wrap input[type=button]:hover {
+	color: #00eeba;
+	border-color: #00eeba;
+	background-color: #121212;
+}
+.buddypress-wrap .standard-form .submit {
+	padding-top: 0px;
+}
+
+/*Search Button*/
+input[type=submit]#bbp_search_submit {
+	padding: 7px !important;
+	color: #00c2ff;
+	background-color: #121212;
+	border: 2px solid;
+	border-color: #00c2ff;
+}
+
+/*Activity Feed icons*/
+.activity-list .activity-item .activity-meta.action .button, .activity-list .activity-item .activity-meta.action .button span {
+	color:#00c2ff;
+}
+
+/*** Registration Form ***/
+/*Inline-block for password strength*/
+#buddypress #pass-strength-result, #buddypress .password-input-wrapper {
+	display:inline-block !important;
+}
+
+/*Hide Name field on Registration Form*/
+#buddypress .signup-form .extended-profile div.field_name {
+	display: none !important;
+}
+
+/*Hide all extended profile fields on Registration Form*/
+#buddypress .signup-form .extended-profile {
+	display: none !important;
+}
+
+/*Hide confirm password field on Registration Form*/
+/*Already hidden by another plugin/theme */
+#buddypress .standard-form  label[for="signup_password_confirm"],
+.register-section  #signup_password_confirm
+{
+    display:none !important;
+}
+
+/*Confirmation message box*/
+.buddypress-wrap .bp-feedback {
+	background-color:unset;
+	color:unset;
+}
+
+body.register aside.bp-feedback {
+    display:none !important;
+}
+
+
+/*** Activation Page ***/
+/*Remove Login Link From Activate Page*/
+#activate-page a {
+	display: none !important;
+}
+
+
+/*** Profile ***/
+
+/* Username on Profile Header */
+/*
+#buddypress div#item-header-cover-image h2 a, #buddypress div#item-header-cover-image h2 {
+	color: #00c2ff;
+	padding: 5px;
+	text-shadow: none;
+	background: #121212;
+	margin-top: -10px;
+	border-color: #121212;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 3px;
+}
+*/
+
+/*Password strength box before input*/
+.buddypress-wrap #pass-strength-result {
+	background-color: unset;
+	border-color: #121212;
+}
+
+/*Edit warning box*/
+#buddypress p.warning {
+	background-color: unset;
+	color: #cb2;
+}
+
+/* Remove Name editing */ 
+.profile.public .field_name, .profile.edit .editfield.field_name {
+	display:none;
+}
+
+
+/*Remove Edit Bio link to WP*/
+.member-description>a:not([class*=button]) {
+	display:none;
+}
+
+/* Change Edit Profile selected tab style*/
+.buddypress .buddypress-wrap .button-nav li.current a, .buddypress .buddypress-wrap .button-nav li.current a:hover {
+	color: #00c2ff;
+	border-color: #00c2ff;
+	border-style: solid;
+	border-width: 3px;
+	border-radius: 3px;
+	background: unset;
+}
+.buddypress .buddypress-wrap .button-nav li a:hover {
+	color: #00c2ff;
+	border-color: #00c2ff;
+	border-style: solid;
+	border-width: 0px 0px 3px 0px;
+	border-radius: 3px;
+	background: unset;
+}
+
+/*Remove Messages background*/
+#message-threads li.selected, #message-threads li.thread-item, .bp-messages-content #thread-preview .preview-content .preview-message {
+	background-color: unset;
+}
+
+/*Remove Profile Fields background*/
+
+/*Remove Edit Fields background*/
+.buddypress-wrap .profile.edit .editfield, .buddypress-wrap .profile.edit .editfield textarea, .buddypress-wrap .profile.edit .editfield input {
+	background-color: unset;
+}
+
+
+/*** Members List ***/
+#members-list.grid>li .list-wrap {
+	background-color:unset;
+}
+
+.buddypress-wrap.bp-dir-hori-nav:not(.bp-vertical-navs) nav:not(.tabbed-links) {
+	box-shadow: none;
+}
+
+/* .buddypress-wrap .select-wrap select {
+	margin-right: 0;
+} */
+
+/*** Messages ***/
+
+.bp-messages-content #bp-message-thread-list li:nth-child(2n) .message-content {
+	background-color: unset;
+}
+
+
+/********************************/
+/* Blocksy Theme Customizations */
+/********************************/
+
+/* Set Flex on celebrity-faceset card */
+li.wp-block-post.celebrity-faceset.type-celebrity-faceset {
+	display: flex;
+	flex-direction: column;
+}
+/* Set Flex on celebrity-faceset card text div */
+li.wp-block-post.celebrity-faceset.type-celebrity-faceset > div.wp-block-group {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+	flex-grow: 1;
+	padding: 1rem;
+}
+
+/* Remove margin from celebrity-faceset card excerpt */
+li.wp-block-post.celebrity-faceset.type-celebrity-faceset > div.wp-block-group > .wp-block-post-title > a {
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/* Remove margin from celebrity-faceset card excerpt */
+li.wp-block-post.celebrity-faceset.type-celebrity-faceset p.wp-block-post-excerpt__excerpt {
+	margin-bottom: 0;
+}
+
+/* Remove margin from pre-model-saehd card excerpt */
+li.wp-block-post.pre-model-saehd.type-pre-model-saehd p.wp-block-post-excerpt__excerpt {
+	margin-bottom: 0;
+}
+
+/* Fix Table border */
+/* TODO: Diagnose cause */
+figure.wp-block-table td, figure.wp-block-table th {
+	border-color: #2a2d38 !important;
+	border-width: 2px !important;
+}
+
+/* Try to Fix Ad Width when page has left sidebar */
+/* @media only screen and (min-width: 1000px) {
+	ins.adsbygoogle.ad-has-sidebar {
+	min-width: 747px !important;
+	max-width: 1070px !important;
+}
+} */
+
+.wp-block-table thead {
+    border-bottom: unset;
+}
+
+/**************************************/
+/* Search & Filter Pro Customizations */
+/**************************************/
+
+article#post-6600 .searchandfilter > ul > li {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 20px;
+}
+
+/* Fix dropwdown extending outside container */
+.ct-sidebar .searchandfilter select.sf-input-select {
+	min-width: unset;
+}
+
+
+/**************************************/
+/*        ContactForm7 Styles         */
+/**************************************/
+
+
+form.wpcf7-form, form.wpcf7-form.init {
+	padding: 32px 32px 0px 32px;
+	background-color:#1c1d20;
+	border-color:#00c2ff;
+	border-style:solid;
+	border-radius: 32px;
+}
+form.wpcf7-form.sent {
+	border-color:#00eeba;
+}
+form.wpcf7-form.failed, form.wpcf7-form.aborted {
+	border-color:#d612b5;
+}
+form.wpcf7-form.spam {
+	border-color:#ff8c28;
+}
+form.wpcf7-form.invalid, form.wpcf7-form.unaccepted {
+	border-color:#cb2;
+}
+
+
+/**************************************/
+/*        BP Notification Bell        */
+/**************************************/
+
+.menu-notification-icon.ct-menu-link {
+	/* margin-left: .25rem;
+	margin-right: .25rem; */
+	padding: 0 0.25rem;
+}
+.notifications_icons {
+	color: #00c2ff;
+	vertical-align: middle;
+}
+.notifications_icons:hover {
+	color: #00eeba;
+}
+	
+.my_bubble_notify {
+	color: #ffffff;
+	border-radius: 3px;
+	background-color: #ff8c28;
+	vertical-align: 20%;
+	position: relative;
+	font-size: small;
+	padding: 0.1em 5px;
+	margin-left: -7px;
+	margin-bottom: 14px;
+}
+.my_bubble_empty {
+	color:#121212;
+	background-color: #2a2d38;
+}
